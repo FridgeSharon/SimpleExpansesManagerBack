@@ -21,7 +21,7 @@ export class User {
   password: string;
 
   @OneToMany(() => Report, (report) => report.user)
-  reports: Report[];
+  expenses: Report[];
 
   @Column({ default: true })
   admin: boolean;

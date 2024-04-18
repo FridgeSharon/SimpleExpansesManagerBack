@@ -5,28 +5,31 @@ export class ExpenseDto {
   id: number;
 
   @Expose()
-  approved: boolean;
+  amount: number;
 
   @Expose()
-  price: number;
+  counterParty: string;
+
+  @Expose()
+  day: number;
+
+  @Expose()
+  month: number;
 
   @Expose()
   year: number;
 
   @Expose()
-  lng: number;
+  expender: string;
 
   @Expose()
-  lat: number;
+  payments: number;
 
   @Expose()
-  make: string;
+  comment: string;
 
   @Expose()
-  model: string;
-
-  @Expose()
-  mileage: number;
+  repeatFor: number;
 
   @Transform(({ obj }) => obj.user.id)
   @Expose()

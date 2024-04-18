@@ -3,33 +3,37 @@ import { User } from '../users/user.entity';
 
 @Entity()
 export class Expense {
+  // default values will be handled by the frontend
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ default: false })
-  approved: boolean;
+  @Column()
+  amount: number;
 
   @Column()
-  price: number;
+  counterParty: string;
 
   @Column()
-  make: string;
+  day: number;
 
   @Column()
-  model: string;
+  month: number;
 
   @Column()
   year: number;
 
   @Column()
-  lng: number;
+  expender: string;
 
   @Column()
-  lat: number;
+  payments: number;
 
   @Column()
-  mileage: number;
+  comment: string;
 
-  @ManyToOne(() => User, (user) => user.reports)
+  @Column()
+  repeatFor: number;
+
+  @ManyToOne(() => User, (user) => user.expenses)
   user: User;
 }
