@@ -1,7 +1,7 @@
 {
-  "name": "simple-expanses-manager-back",
+  "name": "simple-expenses-manager-back",
   "version": "0.0.1",
-  "description": "The back-end of the SimpleExpansesManager",
+  "description": "The back-end of the SimpleExpensesManager",
   "author": "Guy Sharon",
   "private": true,
   "license": "MIT",

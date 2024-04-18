@@ -7,7 +7,7 @@ import {
   IsLongitude,
 } from 'class-validator';
 
-export class CreateReportDto {
+export class CreateExpenseDto {
   @IsString()
   make: string;
 

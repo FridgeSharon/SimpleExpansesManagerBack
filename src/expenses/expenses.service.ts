@@ -1,28 +1,28 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Report } from './report.entity';
-import { CreateReportDto } from './dtos/create-report.dto';
+import { Expense } from './expenses.entity';
+import { CreateExpenseDto } from './dtos/create-expense.dto';
 import { User } from '../users/user.entity';
 import { GetEstimateDto } from './dtos/get-estimate.dto';
 
 @Injectable()
-export class ReportsService {
-  constructor(@InjectRepository(Report) private repo: Repository<Report>) {}
+export class ExpensesService {
+  constructor(@InjectRepository(Expense) private repo: Repository<Expense>) {}
 
-  create(reportDto: CreateReportDto, user: User) {
-    const report = this.repo.create(reportDto);
-    report.user = user;
-    return this.repo.save(report);
+  create(expenseDto: CreateExpenseDto, user: User) {
+    const expense = this.repo.create(expenseDto);
+    expense.user = user;
+    return this.repo.save(expense);
   }
 
   async changeApproval(id: string, approved: boolean) {
-    const report = await this.repo.findOne({ where: { id: parseInt(id) } });
-    if (!report) {
-      throw new NotFoundException('Report not found');
+    const expense = await this.repo.findOne({ where: { id: parseInt(id) } });
+    if (!expense) {
+      throw new NotFoundException('Expense not found');
     }
-    report.approved = approved;
-    return this.repo.save(report);
+    expense.approved = approved;
+    return this.repo.save(expense);
   }
 
   async createEstimate(estimateDto: GetEstimateDto) {

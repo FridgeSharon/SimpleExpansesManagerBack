@@ -5,14 +5,14 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">The back-end for the SimpleExpansesManager.</p>
+  <p align="center">The back-end for the SimpleExpensesManager.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 </p>
 
 ## Description
 
-Based on my [NestJS Tutorial Project](https://github.com/FridgeSharon/NestJS-tutorial-project), this project is a back-end service for the SimpleExpansesManager.
+Based on my [NestJS Tutorial Project](https://github.com/FridgeSharon/NestJS-tutorial-project), this project is a back-end service for the SimpleExpensesManager.
 
 ## Installation
 
