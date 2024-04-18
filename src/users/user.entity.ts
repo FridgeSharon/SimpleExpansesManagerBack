@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
   OneToMany,
 } from 'typeorm';
-import { Report } from '../reports/expanses.entity';
+import { Expense } from '../expenses/expenses.entity';
 
 @Entity()
 export class User {
@@ -20,8 +20,8 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Report, (report) => report.user)
-  expenses: Report[];
+  @OneToMany(() => Expense, (report) => report.user)
+  expenses: Expense[];
 
   @Column({ default: true })
   admin: boolean;
